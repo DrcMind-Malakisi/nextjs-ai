@@ -1,0 +1,157 @@
+[
+  {
+    "id": 1,
+    "name": "T-Shirt Blanc Classique",
+    "description": "Un t-shirt blanc intemporel en coton 100% biologique. Parfait pour toute tenue décontractée.",
+    "price": 29.99,
+    "image": "/placeholder.svg?height=400&width=400",
+    "category": "vêtements",
+    "isNew": true,
+    "quantity": 1
+  },
+  {
+    "id": 2,
+    "name": "Jean Coupe Slim",
+    "description": "Jean moderne à coupe slim avec stretch confortable. Fabriqué avec du denim durable.",
+    "price": 79.99,
+    "discountPrice": 59.99,
+    "image": "/placeholder.svg?height=400&width=400",
+    "category": "vêtements",
+    "isNew": false,
+    "quantity": 4
+  },
+  {
+    "id": 3,
+    "name": "Sac Bandoulière en Cuir",
+    "description": "Élégant sac bandoulière en cuir véritable avec bandoulière réglable et plusieurs compartiments.",
+    "price": 129.99,
+    "image": "/placeholder.svg?height=400&width=400",
+    "category": "accessoires",
+    "isNew": false,
+    "quantity": 10
+  },
+  {
+    "id": 4,
+    "name": "Sweat à Capuche Oversize",
+    "description": "Sweat à capuche oversize confortable avec poche avant. Fabriqué en mélange de coton doux pour un confort maximal.",
+    "price": 49.99,
+    "image": "/placeholder.svg?height=400&width=400",
+    "category": "vêtements",
+    "isNew": true,
+    "quantity": 2
+  },
+  {
+    "id": 5,
+    "name": "Montre Minimaliste",
+    "description": "Montre minimaliste élégante avec bracelet en cuir. Résistante à l'eau et parfaite pour un usage quotidien.",
+    "price": 89.99,
+    "image": "/placeholder.svg?height=400&width=400",
+    "category": "accessoires",
+    "isNew": false,
+    "quantity": 5
+  },
+  {
+    "id": 6,
+    "name": "Robe d'Été",
+    "description": "Robe d'été légère et fluide à motif floral. Parfaite pour les journées chaudes et les occasions spéciales.",
+    "price": 69.99,
+    "discountPrice": 49.99,
+    "image": "/placeholder.svg?height=400&width=400",
+    "category": "vêtements",
+    "isNew": true,
+    "quantity": 0
+  },
+  {
+    "id": 7,
+    "name": "Baskets en Toile",
+    "description": "Baskets en toile légères et confortables. Parfaites pour un style décontracté au quotidien.",
+    "price": 59.99,
+    "image": "/placeholder.svg?height=400&width=400",
+    "category": "chaussures",
+    "isNew": false,
+    "quantity": 0
+  },
+  {
+    "id": 8,
+    "name": "Chemise en Lin",
+    "description": "Chemise élégante en lin pur. Idéale pour les journées chaudes d'été et les occasions semi-formelles.",
+    "price": 69.99,
+    "image": "/placeholder.svg?height=400&width=400",
+    "category": "vêtements",
+    "isNew": true,
+    "quantity": 3
+  },
+  {
+    "id": 9,
+    "name": "Parfum Élégance",
+    "description": "Un parfum raffiné aux notes de jasmin et de bois de santal. Une fragrance intemporelle pour toutes les occasions.",
+    "price": 89.99,
+    "discountPrice": 74.99,
+    "image": "/placeholder.svg?height=400&width=400",
+    "category": "beauté",
+    "isNew": false,
+    "quantity": 1
+  },
+  {
+    "id": 10,
+    "name": "Écharpe en Cachemire",
+    "description": "Écharpe luxueuse en cachemire doux. Chaude et élégante pour les journées fraîches.",
+    "price": 119.99,
+    "image": "/placeholder.svg?height=400&width=400",
+    "category": "accessoires",
+    "isNew": true,
+    "quantity": 0
+  },
+  {
+    "id": 11,
+    "name": "Bottes en Cuir",
+    "description": "Bottes en cuir véritable avec doublure chaude. Parfaites pour l'automne et l'hiver.",
+    "price": 149.99,
+    "discountPrice": 129.99,
+    "image": "/placeholder.svg?height=400&width=400",
+    "category": "chaussures",
+    "isNew": false,
+    "quantity": 2
+  },
+  {
+    "id": 12,
+    "name": "Lunettes de Soleil Aviateur",
+    "description": "Lunettes de soleil style aviateur avec monture métallique. Protection UV complète et style intemporel.",
+    "price": 79.99,
+    "image": "/placeholder.svg?height=400&width=400",
+    "category": "accessoires",
+    "isNew": true,
+    "quantity": 5
+  },
+  {
+    "id": 13,
+    "name": "Crème Hydratante Visage",
+    "description": "Crème hydratante enrichie en vitamines et antioxydants. Nourrit et protège la peau toute la journée.",
+    "price": 34.99,
+    "image": "/placeholder.svg?height=400&width=400",
+    "category": "beauté",
+    "isNew": false,
+    "quantity": 8
+  },
+  {
+    "id": 14,
+    "name": "Pantalon Chino",
+    "description": "Pantalon chino élégant et confortable. Coupe moderne adaptée à toutes les occasions.",
+    "price": 69.99,
+    "image": "/placeholder.svg?height=400&width=400",
+    "category": "vêtements",
+    "isNew": false,
+    "quantity": 6
+  },
+  {
+    "id": 15,
+    "name": "Sac à Dos en Toile",
+    "description": "Sac à dos spacieux en toile résistante. Nombreux compartiments et design contemporain.",
+    "price": 89.99,
+    "discountPrice": 69.99,
+    "image": "/placeholder.svg?height=400&width=400",
+    "category": "accessoires",
+    "isNew": true,
+    "quantity": 0
+  }
+]
