@@ -4,20 +4,12 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Textarea } from "@/components/ui/textarea";
-import { useCompletion } from "@ai-sdk/react";
+import { useState } from "react";
 
 export default function SummarizationForm() {
-  const {
-    completion,
-    complete,
-    input,
-
-    isLoading,
-    handleInputChange,
-    error,
-  } = useCompletion({
-    api: "/api/text-summarization",
-  });
+  const [input, setInput] = useState("");
+  const [completion, setCompletion] = useState<string | null>(null);
+  const [isLoading, setIsLoading] = useState(false);
 
   return (
     <div className="space-y-8">
@@ -27,7 +19,7 @@ export default function SummarizationForm() {
           id="text"
           placeholder="Entrez le texte à résumer ici..."
           value={input}
-          onChange={handleInputChange}
+          onChange={(e) => setInput(e.target.value)}
           disabled={isLoading}
           rows={5}
           className="mt-1 h-64 resize-none"
@@ -42,7 +34,10 @@ export default function SummarizationForm() {
       <div className="flex justify-end">
         <Button
           disabled={isLoading}
-          onClick={async () => await complete(input)}
+          onClick={() => {
+            setIsLoading(true);
+            setCompletion(null);
+          }}
         >
           {isLoading ? "Résumant..." : "Résumer"}
         </Button>
@@ -61,7 +56,6 @@ export default function SummarizationForm() {
             </div>
           )}
           {completion && <p>{completion}</p>}
-          {error && <p className="text-red-500">{error.message}</p>}
         </CardContent>
       </Card>
     </div>

@@ -3,7 +3,7 @@ import SummarizationForm from "./components/summarization-form";
 
 export default function page() {
   return (
-    <main className="flex min-h-[calc(100vh-20vh)] flex-col items-center justify-between lg:p-24 p-4 max-w-7xl mx-auto">
+    <main className="flex min-h-[calc(100vh-20vh)] flex-col items-center justify-between lg:p-16 p-4 max-w-7xl mx-auto">
       <div>
         <h1 className="text-2xl font-bold">Summarisation de texte avec l'IA</h1>
         <p>

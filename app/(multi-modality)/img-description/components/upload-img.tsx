@@ -7,17 +7,19 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Upload, X } from "lucide-react";
 import Image from "next/image";
-import { useChat } from "@ai-sdk/react";
+
+type Message = {
+  id: string;
+  role: "user" | "assistant";
+  content: string;
+};
 
 import { Skeleton } from "@/components/ui/skeleton";
 import { Input } from "@/components/ui/input";
 export default function UploadImage() {
   const [preview, setPreview] = useState<string | null>(null);
-
-  const { messages, input, handleInputChange, handleSubmit, status, setInput } =
-    useChat({
-      api: "/api/img-description",
-    });
+  const [input, setInput] = useState<string>("");
+  const [messages, setMessages] = useState<Message[]>([]);
 
   const fileInputRef = useRef<HTMLInputElement>(null);
 
@@ -27,32 +29,21 @@ export default function UploadImage() {
     fileInputRef.current?.click();
   };
 
-  useEffect(() => {
-    setInput("Décrivez ce que vous voulez savoir sur l'image");
-  }, []);
-
   return (
     <div className="w-full  mx-auto mt-6 ">
       <Card className="border-dashed">
         <CardContent className="p-6">
           <form
             onSubmit={(event) => {
-              handleSubmit(event, {
-                experimental_attachments: files,
-              });
-
-              setFiles(undefined);
-
-              if (fileInputRef.current) {
-                fileInputRef.current.value = "";
-              }
+              event.preventDefault();
+              alert("Form submitted");
             }}
           >
             <Input
               type="text"
               placeholder="Décrivez ce que vous voulez savoir sur l'image"
               value={input}
-              onChange={handleInputChange}
+              onChange={(e) => setInput(e.target.value)}
               className="mb-4"
             />
 

@@ -1,7 +1,7 @@
 "use client";
 
-import { useEffect } from "react";
-import { useCompletion } from "@ai-sdk/react";
+import { useState } from "react";
+
 import { Textarea } from "@/components/ui/textarea";
 import {
   Tooltip,
@@ -13,32 +13,17 @@ import { Button } from "@/components/ui/button";
 import { Loader2, PenLine } from "lucide-react";
 
 export default function AutoCompletionForm() {
-  const {
-    completion,
-    complete,
-    isLoading,
-    input,
-    setInput,
-    handleInputChange,
-  } = useCompletion({
-    api: "/api/auto-completion",
-  });
-
-  useEffect(() => {
-    if (completion) {
-      setInput(completion);
-    }
-  }, [completion, setInput]);
+  const [input, setInput] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
   return (
     <form action="">
       <div className="w-full relative">
         <Textarea
-          disabled={isLoading}
           value={input}
-          onChange={handleInputChange}
+          onChange={(e) => setInput(e.target.value)}
           placeholder="Entrez votre texte ici..."
           // adding a border animation when is loading
-          className={isLoading ? "border-primary " : " resize-none"}
+
           rows={5}
         />
 
@@ -53,7 +38,8 @@ export default function AutoCompletionForm() {
                     type="button"
                     className="rounded-full p-3 w-4 h-4 "
                     onClick={async () => {
-                      await complete(input);
+                      setIsLoading(true);
+                      alert("ok");
                     }}
                   >
                     {isLoading ? (

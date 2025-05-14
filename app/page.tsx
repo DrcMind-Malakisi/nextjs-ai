@@ -1,6 +1,4 @@
-import Image from "next/image";
 import Link from "next/link";
-import { title } from "process";
 
 export default function Home() {
   const links = [
@@ -14,8 +12,8 @@ export default function Home() {
           href: "/auto-completion",
         },
         {
-          title: "Text Summarization",
-          description: "Résumé de texte",
+          title: "Synthèse de texte",
+          description: "Résumé de texte à partir d'un grand texte",
           href: "/text-summarization",
         },
       ],
@@ -43,20 +41,15 @@ export default function Home() {
       description: "Faire appel à des outils externes",
       subLinks: [
         {
-          title: "Product finder",
-          description: "Génération de texte à partir d'un produit",
-          href: "/product-finder",
-        },
-        {
-          title: "Todo app",
-          description: "Génération de texte à partir d'une todo list",
-          href: "/todo-app",
+          title: "E-commerce assistant",
+          description: "Un asistant virtuel pour le e-commerce",
+          href: "/ecommerce-assistant",
         },
       ],
     },
   ];
   return (
-    <main className="flex min-h-[calc(100vh-10vh)] flex-col items-center justify-between lg:p-24 p-8 max-w-7xl mx-auto">
+    <main className="flex min-h-[calc(100vh-10vh)] flex-col items-center justify-between lg:p-16 p-8 max-w-7xl mx-auto">
       <section>
         <h1 className="text-3xl font-bold text-center mb-4">
           Intégration de l'IA dans les applications web
@@ -97,7 +90,7 @@ export default function Home() {
                     >
                       {subLink.title}
                     </Link>
-                    <p className="text-sm">{subLink.description}</p>
+                    <p>{subLink.description}</p>
                   </li>
                 ))}
               </ol>
