@@ -1,5 +1,6 @@
 import { streamText, Message } from "ai";
 import { google } from "@ai-sdk/google";
+import { model } from "@/constant";
 
 // Allow streaming responses up to 30 seconds
 export const maxDuration = 30;
@@ -10,7 +11,7 @@ export async function POST(req: Request) {
   // description de l'image
 
   const result = streamText({
-    model: google("gemini-2.5-pro-exp-03-25"),
+    model: google(model),
     system:
       "Tu es expert en visionage par ordinateur et en traitement d'images." +
       "Tu es capable d'analuser une image et de fournir une description détaillée." +

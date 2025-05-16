@@ -1,11 +1,12 @@
 import { streamText } from "ai";
 import { google } from "@ai-sdk/google";
+import { model } from "@/constant";
 
 export async function POST(req: Request) {
   const { prompt }: { prompt: string } = await req.json();
 
   const result = streamText({
-    model: google("gemini-2.5-pro-exp-03-25"),
+    model: google(model),
     system:
       " Tu es un assistant virtuel qui aide les utilisateurs à résumer des textes." +
       "Tu dois répondre de manière concise et précise." +

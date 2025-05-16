@@ -19,7 +19,7 @@ export async function POST(request: Request) {
   }
 
   const result = await generateObject({
-    model: google("gemini-2.5-pro-exp-03-25"),
+    model: google(model),
     system:
       "Tu es un expert en traitement de documents et en extraction de données." +
       "Tu es capable d'extraire des informations pertinentes à partir d' image (facture )." +

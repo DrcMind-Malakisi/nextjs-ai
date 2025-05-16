@@ -73,7 +73,7 @@ export const tools: ToolSet = {
       const product = (await productRes.json()) as Product;
       const res = await fetch("http://localhost:3000/api/cart", {
         method: "POST",
-        body: JSON.stringify({ id: product.id }),
+        body: JSON.stringify({ product }),
       });
 
       return `Le produit ${product.name} a été ajouté au panier`;
@@ -87,6 +87,30 @@ export const tools: ToolSet = {
         method: "DELETE",
       });
       return `Le panier a été vidé`;
+    },
+  },
+
+  getCart: {
+    description: "Get cart content",
+    parameters: z.object({}),
+    execute: async () => {
+      const res = await fetch("http://localhost:3000/api/cart");
+      const cart = await res.json();
+      if (cart.length === 0) {
+        return "Le panier est vide";
+      }
+
+      // Format the cart content
+      const formattedCart = cart.map((product: Product) => {
+        return `${product.name} - ${product.price}$ (${product.quantity})`;
+      });
+      const totalAmount = cart.reduce(
+        (acc: number, product: Product) =>
+          acc + product.price * product.quantity,
+        0
+      );
+      const cartContent = formattedCart.join(", ");
+      return `Voici le contenu de votre panier : ${cartContent}. Montant total : ${totalAmount}$`;
     },
   },
 };

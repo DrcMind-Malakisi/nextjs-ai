@@ -165,6 +165,22 @@ export default function ChatInterface() {
                               break;
                           }
                         }
+                        case "getCart": {
+                          switch (part.toolInvocation.state) {
+                            case "call":
+                              return <p>Je charge vos produits ... </p>;
+                            case "result":
+                              return (
+                                <div>
+                                  {/* one setence */}
+                                  <p>{part.toolInvocation.result}</p>
+                                </div>
+                              );
+
+                            default:
+                              break;
+                          }
+                        }
                       }
 
                     default:

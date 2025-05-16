@@ -8,7 +8,9 @@ export const GET = async (req: Request) => {
 };
 
 export const POST = async (req: Request) => {
-  const product: Product = await req.json();
+  const data = await req.json();
+  const { product }: { product: Product } = data;
+
   productsInCart.push(product);
   return NextResponse.json(productsInCart);
 };

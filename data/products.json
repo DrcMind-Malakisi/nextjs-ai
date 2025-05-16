@@ -4,7 +4,7 @@
     "name": "T-Shirt Blanc Classique",
     "description": "Un t-shirt blanc intemporel en coton 100% biologique. Parfait pour toute tenue décontractée.",
     "price": 29.99,
-    "image": "/placeholder.svg?height=400&width=400",
+    "image": "https://strellson.com/medias/sys_master/images/images/h8b/h0c/9884516548638/9884516548638.jpg",
     "category": "vêtements",
     "isNew": true,
     "quantity": 1
@@ -15,7 +15,7 @@
     "description": "Jean moderne à coupe slim avec stretch confortable. Fabriqué avec du denim durable.",
     "price": 79.99,
     "discountPrice": 59.99,
-    "image": "/placeholder.svg?height=400&width=400",
+    "image": "https://images.unsplash.com/photo-1747134392591",
     "category": "vêtements",
     "isNew": false,
     "quantity": 4

@@ -47,11 +47,6 @@ export default function Home() {
           description: "Génération de texte à partir d'un produit",
           href: "/product-finder",
         },
-        {
-          title: "Todo app",
-          description: "Génération de texte à partir d'une todo list",
-          href: "/todo-app",
-        },
       ],
     },
   ];
